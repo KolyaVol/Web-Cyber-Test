@@ -3,7 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Test project</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -17,13 +23,47 @@
         </p>
         <button class="description__btn" id="open-modal">
           Попробовать бесплатно
+          <div class="link-icon">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M7 7H17V17"
+                stroke="#1F4284"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M7 17L17 7"
+                stroke="#1F4284"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
         </button>
       </section>
 
-      <img class="content__image" src="./image.png" alt="demo image" />
+      <img
+        class="content__image"
+        srcset="
+          ./image1920.png 1920w,
+          ./image1440.png 1440w,
+          ./image768.png   768w,
+          ./image375.png   375w
+        "
+        alt="demo image"
+      />
     </main>
+
     <section class="modal">
-      <form class="login-form" id="login-form
+      <form class="login-form" id="login-form">
         <div class="login-form__cross"></div>
         <h3>Войти в систему</h3>
 
@@ -48,8 +88,8 @@
         </div>
         <a href="/">Восстановить</a>
 
-        <button type="submit">Войти</button>
-        <a>Зарегестрироваться</a>
+        <button class="login-form__btn submit" type="submit">Войти</button>
+        <a href="/" class="login-form__btn register">Зарегестрироваться</a>
       </form>
     </section>
 
