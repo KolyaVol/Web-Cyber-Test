@@ -7,6 +7,12 @@
 html {
   font-size: 10px;
 }
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 
 .content {
   margin: 3.6rem 4rem;
@@ -48,11 +54,16 @@ html {
   max-height: 6.8rem;
   border-radius: 6rem;
   padding: 1.2rem 1.2rem 1.2rem 2.4rem;
+  cursor: pointer;
   color: #fff;
   font-weight: 500;
   font-size: 1.8rem;
   background-color: #244c98;
   border: none;
+}
+
+.description__btn:hover {
+  background-color: #6990ca;
 }
 
 .link-icon {
@@ -63,6 +74,10 @@ html {
   height: 4.4rem;
   border-radius: 4.4rem;
   background-color: #fff;
+}
+
+.description__btn:hover .link-icon {
+  transform: rotate(360deg);
 }
 
 .content__image {
@@ -87,6 +102,10 @@ html {
 }
 
 .register {
+}
+
+.transition {
+  transition: 0.3s;
 }
 
 @media (max-width: 1440px) {
