@@ -64,29 +64,38 @@
 
     <section class="modal">
       <form class="login-form" id="login-form">
-        <div class="login-form__cross"></div>
-        <h3>Войти в систему</h3>
+        <div class="login-form__cross">
+          <img src="./x.svg" alt="cross close modal" />
+        </div>
+        <h3 class="login-form__header">Войти в систему</h3>
 
         <input
+          class="login-form__input"
           type="text"
-          id="username"
-          name="username"
+          id="Email"
+          name="Email"
           placeholder="Email/Телефон"
           required
         />
 
         <input
+          class="login-form__input"
           type="password"
           id="password"
           name="password"
           placeholder="Пароль"
           required
         />
-        <div>
-          <input type="checkbox" name="Запомнить пароль" id="" />
-          <span>Запомнить пароль</span>
+        <div class="remember-pass">
+          <input
+            class="remember-pass__checkbox"
+            type="checkbox"
+            name="Запомнить пароль"
+            id=""
+          />
+          <span class="remember-pass__text">Запомнить пароль</span>
         </div>
-        <a href="/">Восстановить</a>
+        <a class="login-form__restore-link" href="/">Восстановить</a>
 
         <button class="login-form__btn submit" type="submit">Войти</button>
         <a href="/" class="login-form__btn register">Зарегестрироваться</a>

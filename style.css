@@ -5,6 +5,9 @@
   font-family: monospace;
 }
 html {
+  --main-blue-color: #244c98;
+  --secondary-blue-color: #1f4284;
+
   font-size: 10px;
 }
 body {
@@ -32,7 +35,7 @@ body {
 
 .description__header {
   margin-bottom: 1.8rem;
-  color: #1f4284;
+  color: var(--secondary-blue-color);
   font-weight: 500;
   font-size: 3rem;
 }
@@ -58,7 +61,7 @@ body {
   color: #fff;
   font-weight: 500;
   font-size: 1.8rem;
-  background-color: #244c98;
+  background-color: var(--main-blue-color);
   border: none;
 }
 
@@ -86,22 +89,108 @@ body {
   object-fit: cover;
   border-radius: 0 1rem 1rem 0;
 }
+
 .modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: #928f8f65;
 }
 
 .login-form {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 2.4rem;
+  width: 33vw;
+  max-width: 50rem;
+  min-width: 35rem;
+  max-height: 57.5rem;
+  background-color: #f0f4fc;
 }
 
 .login-form__cross {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  right: 0;
+  background-color: #fff;
+  left: 0;
+  width: 5.2rem;
+  height: 5.2rem;
+  border-radius: 1rem;
+}
+
+.login-form__header {
+  color: #323232;
+  font-weight: 500;
+  font-size: 2.4rem;
+  margin-bottom: 1.8rem;
+}
+
+.login-form__input {
+  width: 100%;
+  background-color: #d7e2f6;
+  border-radius: 1rem;
+  border: none;
+  padding: 2.4rem;
+  outline: none;
+  margin-bottom: 0.4rem;
+}
+.login-form__input::placeholder {
+  color: var(--secondary-blue-color);
+  font-weight: 500;
+  font-size: 1.8rem;
+}
+
+.remember-pass {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 1.4rem;
+  margin: 2.4rem 0;
+}
+.remember-pass__checkbox {
+  border-color: #323232;
+}
+.remember-pass__text {
+  font-weight: 400;
+  font-size: 1.8rem;
+}
+.login-form__restore-link {
+  text-decoration: none;
+  color: var(--main-blue-color);
+  margin-bottom: 3.6rem;
+  font-weight: 500;
+  font-size: 2rem;
 }
 
 .login-form__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 1.8rem 0;
+  font-weight: 500;
+  font-size: 1.8rem;
+  border-radius: 0.4rem;
 }
 
 .submit {
+  border: none;
+  background-color: var(--main-blue-color);
+  color: #fff;
+  margin-bottom: 0.4rem;
 }
 
 .register {
+  text-decoration: none;
+  border: 0.1rem solid var(--main-blue-color);
+  color: var(--main-blue-color);
 }
 
 .transition {
