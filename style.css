@@ -56,7 +56,7 @@ body {
 
 .description__btn {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   gap: 2rem;
   max-width: 34.1rem;
@@ -232,9 +232,7 @@ body {
   .description__header {
     font-size: 2.6rem;
   }
-  .content {
-    flex-direction: column;
-  }
+
   .description {
     max-width: 100%;
   }
@@ -244,8 +242,14 @@ body {
     border-radius: 0 0 1rem 1rem;
   }
 }
+@media (max-width: 1200px) {
+  .content {
+    flex-direction: column;
+  }
+}
 @media (max-width: 768px) {
   .content {
+    margin: 2.4rem;
     max-height: max-content;
   }
   .description {
@@ -257,6 +261,10 @@ body {
   .description__text,
   .description__btn {
     font-size: 1.5rem;
+  }
+  .description__btn {
+    line-height: 24px;
+    padding: 1rem 1rem 1rem 1.8rem;
   }
 }
 
