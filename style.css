@@ -4,17 +4,23 @@
   box-sizing: border-box;
   font-family: monospace;
 }
+
 html {
   --main-blue-color: #244c98;
   --secondary-blue-color: #1f4284;
 
   font-size: 10px;
 }
+
 body {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+
+.transition {
+  transition: ease all 0.3s;
 }
 
 .content {
@@ -91,6 +97,8 @@ body {
 }
 
 .modal {
+  top: 0;
+  left: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -98,6 +106,15 @@ body {
   width: 100vw;
   height: 100vh;
   background: #928f8f65;
+  opacity: 0;
+}
+
+.modal.removed {
+  display: none;
+}
+
+.modal.visible {
+  opacity: 1;
 }
 
 .login-form {
@@ -110,19 +127,32 @@ body {
   min-width: 35rem;
   max-height: 57.5rem;
   background-color: #f0f4fc;
+  opacity: inherit;
+}
+
+.login-form__cross-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 .login-form__cross {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
-  right: 0;
+  cursor: pointer;
   background-color: #fff;
-  left: 0;
   width: 5.2rem;
   height: 5.2rem;
   border-radius: 1rem;
+}
+
+.login-form__cross:hover {
+  background-color: #dbdbdb;
+}
+
+.login-form__cross:hover img {
+  transform: scale(1.2);
 }
 
 .login-form__header {
@@ -141,6 +171,7 @@ body {
   outline: none;
   margin-bottom: 0.4rem;
 }
+
 .login-form__input::placeholder {
   color: var(--secondary-blue-color);
   font-weight: 500;
@@ -155,6 +186,9 @@ body {
   margin: 2.4rem 0;
 }
 .remember-pass__checkbox {
+  cursor: pointer;
+  transform: scale(1.85);
+  margin: 0 1rem 0 0.7rem;
   border-color: #323232;
 }
 .remember-pass__text {
@@ -173,6 +207,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
   width: 100%;
   padding: 1.8rem 0;
   font-weight: 500;
@@ -193,10 +228,6 @@ body {
   color: var(--main-blue-color);
 }
 
-.transition {
-  transition: 0.3s;
-}
-
 @media (max-width: 1440px) {
   .description__header {
     font-size: 2.6rem;
@@ -211,5 +242,29 @@ body {
     width: 100%;
 
     border-radius: 0 0 1rem 1rem;
+  }
+}
+@media (max-width: 768px) {
+  .content {
+    max-height: max-content;
+  }
+  .description {
+    padding: 2.4rem;
+  }
+  .description__header {
+    font-size: 2rem;
+  }
+  .description__text,
+  .description__btn {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .description__header {
+    font-size: 1.7rem;
+  }
+  .description__text {
+    font-size: 1.3rem;
   }
 }

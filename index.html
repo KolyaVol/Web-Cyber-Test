@@ -21,7 +21,7 @@
           не менее 2500 средних и малых проектов. Используя знания и накопленный
           опыт мы можем предложить
         </p>
-        <button class="description__btn transition" id="open-modal">
+        <button class="description__btn transition">
           Попробовать бесплатно
           <div class="link-icon transition">
             <svg
@@ -62,11 +62,14 @@
       />
     </main>
 
-    <section class="modal">
-      <form class="login-form" id="login-form">
-        <div class="login-form__cross">
-          <img src="./x.svg" alt="cross close modal" />
+    <section class="modal transition removed">
+      <form class="login-form transition">
+        <div class="login-form__cross-container">
+          <div class="login-form__cross transition">
+            <img src="./x.svg" alt="cross close modal" />
+          </div>
         </div>
+
         <h3 class="login-form__header">Войти в систему</h3>
 
         <input
